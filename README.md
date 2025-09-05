@@ -53,46 +53,44 @@ This project was developed in **NetBeans** using **Swing GUI builder** (`.form` 
 ## 🗂 Project Structure
 
 Wool_management/src/
-├─ Images/ # images/resources for UI
-├─ Project/ # (if additional project-specific files)
-├─ wool_management/ # NetBeans package (forms/resources)
-├─ arrange_vehicles.java # Vehicle arrangement screen
-├─ billing.java # Buyer billing
-├─ billing_producer.java # Producer billing
-├─ buyer.java # Buyer details screen
-├─ Connect.java # Database connection helper
-├─ customer_login.java # Customer login
-├─ Customer_Page.java # Customer dashboard
-├─ default_vehicles.java # Vehicles marked as default
-├─ DriverManager.java # JDBC driver helper
-├─ dyeing.java # Wool dyeing step
-├─ EmpDetails.java # Employee details (alt)
-├─ EmployeeDetails.java # Employee details screen
-├─ Front1.java # Main front page
-├─ Login.java # Login screen
-├─ Login_Page.java # Alternative login
-├─ Main_Frame.java # Main GUI frame
-├─ Management.java # Management dashboard
-├─ new_vehicles.java # New vehicles management
-├─ Paragraph.java # PDF helper class
-├─ PdfPTable.java # PDF table generator
-├─ producer.java # Producer information
-├─ Running_Vehicles.java # Running vehicle tracking
-├─ sell_by_former.java # Farmer selling UI
-├─ shearing.java # Wool shearing step
-├─ sorting.java # Sorting wool step
-├─ Storing_place.java # Storage place manager
-├─ StudentPage.java # (extra screen, maybe unused)
-├─ wool_information.java # Wool information module
-├─ wool_preprocessing.java # Wool preprocessing main
-├─ wool_quality.java # Wool quality module
-├─ wool_storage.java # Wool storage
-├─ wool_tracking.java # Wool tracking dashboard
-├─ wool_trading.java # Wool trading
-├─ wool_training.java # Wool training
+├─ Images/                     # images/resources for UI
+├─ Project/                    # (additional project-specific files)
+├─ wool_management/            # NetBeans package (forms/resources)
+├─ arrange_vehicles.java       # Vehicle arrangement screen
+├─ billing.java                # Buyer billing
+├─ billing_producer.java       # Producer billing
+├─ buyer.java                  # Buyer details screen
+├─ Connect.java                # Database connection helper
+├─ customer_login.java         # Customer login
+├─ Customer_Page.java          # Customer dashboard
+├─ default_vehicles.java       # Vehicles marked as default
+├─ DriverManager.java          # JDBC driver helper
+├─ dyeing.java                 # Wool dyeing step
+├─ EmpDetails.java             # Employee details (alt)
+├─ EmployeeDetails.java        # Employee details screen
+├─ Front1.java                 # Main front page
+├─ Login.java                  # Login screen
+├─ Login_Page.java             # Alternative login
+├─ Main_Frame.java             # Main GUI frame
+├─ Management.java             # Management dashboard
+├─ new_vehicles.java           # New vehicles management
+├─ Paragraph.java              # PDF helper class
+├─ PdfPTable.java              # PDF table generator
+├─ producer.java               # Producer information
+├─ Running_Vehicles.java       # Running vehicle tracking
+├─ sell_by_former.java         # Farmer selling UI
+├─ shearing.java               # Wool shearing step
+├─ sorting.java                # Sorting wool step
+├─ Storing_place.java          # Storage place manager
+├─ StudentPage.java            # (extra screen, maybe unused)
+├─ wool_information.java       # Wool information module
+├─ wool_preprocessing.java     # Wool preprocessing main
+├─ wool_quality.java           # Wool quality module
+├─ wool_storage.java           # Wool storage
+├─ wool_tracking.java          # Wool tracking dashboard
+├─ wool_trading.java           # Wool trading
+└─ wool_training.java          # Wool training
 
-yaml
-Copy code
 
 ---
 
