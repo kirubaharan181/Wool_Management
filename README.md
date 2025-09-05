@@ -50,8 +50,9 @@ This project was developed in **NetBeans** using **Swing GUI builder** (`.form` 
 
 ---
 
-## 🗂 Project Structure
+## 📂 Project Structure
 
+```text
 Wool_management/src/
 ├─ Images/                     # images/resources for UI
 ├─ Project/                    # (additional project-specific files)
@@ -90,7 +91,6 @@ Wool_management/src/
 ├─ wool_tracking.java          # Wool tracking dashboard
 ├─ wool_trading.java           # Wool trading
 └─ wool_training.java          # Wool training
-
 
 ---
 
