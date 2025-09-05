@@ -1,229 +1,142 @@
 # Wool Management System — From Farm to Fabric
 
-A Java Swing + MySQL desktop application that digitises the Indian wool supply chain — from producers to storage, transport, quality certification, and trading — with an easy GUI and a simple database backend.
-
-> **Why this exists:** the wool sector struggles with transparency, traceability, inventory and direct trading. This app centralises market info, tracking, storage, quality, marketplace and training in one place.
+A **Java Swing desktop application** with a **MySQL backend** to manage the Indian wool supply chain — covering production, storage, transport, certification, and trading.  
+This project was developed in **NetBeans** using **Swing GUI builder** (`.form` + `.java` files).
 
 ---
 
 ## ✨ Features (Modules)
-- **Wool Information:** producer directory and market trends.
-- **Wool Tracking:** monitor consignments & vehicles; statuses like *ARRANGED*, *RUNNING* or *DEFAULT*; delivery updates.
-- **Quality Assurance:** record grades & digital certificates for trust in transactions.
-- **Storage:** inventory CRUD (add/update/search/print) and storage locations.
-- **Trading:** internal marketplace for direct farmer↔buyer deals.
-- **Training:** region/state-wise artisans and educational resources.
-- **Secure Login:** Manager & Customer roles.
+
+- **Login & Authentication**
+  - `Login.java`, `Login_Page.java`, `customer_login.java`, `Customer_Page.java`
+  - Manages Manager and Customer logins, sign-up, and access control.
+
+- **Dashboard / Navigation**
+  - `Front1.java`, `Main_Frame.java`, `Management.java`
+  - Provides central navigation to modules after login.
+
+- **Wool Information**
+  - `wool_information.java`
+  - Manage details about wool types, producers, and general info.
+
+- **Wool Tracking**
+  - `wool_tracking.java`, `arrange_vehicles.java`, `Running_Vehicles.java`, `default_vehicles.java`, `new_vehicles.java`
+  - Assign and monitor vehicles; track status such as **ARRANGED**, **RUNNING**, or **DEFAULT**.
+
+- **Wool Storage**
+  - `wool_storage.java`, `Storing_place.java`
+  - Manage storage locations, add/update/search inventory, and print storage details.
+
+- **Wool Quality**
+  - `wool_quality.java`
+  - Handle certification and grading of wool products.
+
+- **Wool Trading**
+  - `wool_trading.java`, `sell_by_former.java`, `buyer.java`, `billing.java`, `billing_producer.java`
+  - Facilitate marketplace activities between farmers and buyers, including billing.
+
+- **Wool Training**
+  - `wool_training.java`
+  - Provides training materials and artisan-related resources.
+
+- **Wool Preprocessing**
+  - `wool_preprocessing.java`, `shearing.java`, `sorting.java`, `dyeing.java`
+  - Modules to represent preprocessing stages before trading/storage.
+
+- **Employee & Utility**
+  - `EmployeeDetails.java`, `EmpDetails.java`
+  - Manage employee-related details.
+  - Utility files: `Connect.java` (DB connection), `DriverManager.java` (driver loader), `PdfPTable.java`, `Paragraph.java` (PDF utilities).
 
 ---
 
-## 🧱 Architecture
-[ Java Swing UI ] <—> [ Java business logic ] <—> [ MySQL Database ]
+## 🗂 Project Structure
+
+Wool_management/src/
+├─ Images/ # images/resources for UI
+├─ Project/ # (if additional project-specific files)
+├─ wool_management/ # NetBeans package (forms/resources)
+├─ arrange_vehicles.java # Vehicle arrangement screen
+├─ billing.java # Buyer billing
+├─ billing_producer.java # Producer billing
+├─ buyer.java # Buyer details screen
+├─ Connect.java # Database connection helper
+├─ customer_login.java # Customer login
+├─ Customer_Page.java # Customer dashboard
+├─ default_vehicles.java # Vehicles marked as default
+├─ DriverManager.java # JDBC driver helper
+├─ dyeing.java # Wool dyeing step
+├─ EmpDetails.java # Employee details (alt)
+├─ EmployeeDetails.java # Employee details screen
+├─ Front1.java # Main front page
+├─ Login.java # Login screen
+├─ Login_Page.java # Alternative login
+├─ Main_Frame.java # Main GUI frame
+├─ Management.java # Management dashboard
+├─ new_vehicles.java # New vehicles management
+├─ Paragraph.java # PDF helper class
+├─ PdfPTable.java # PDF table generator
+├─ producer.java # Producer information
+├─ Running_Vehicles.java # Running vehicle tracking
+├─ sell_by_former.java # Farmer selling UI
+├─ shearing.java # Wool shearing step
+├─ sorting.java # Sorting wool step
+├─ Storing_place.java # Storage place manager
+├─ StudentPage.java # (extra screen, maybe unused)
+├─ wool_information.java # Wool information module
+├─ wool_preprocessing.java # Wool preprocessing main
+├─ wool_quality.java # Wool quality module
+├─ wool_storage.java # Wool storage
+├─ wool_tracking.java # Wool tracking dashboard
+├─ wool_trading.java # Wool trading
+├─ wool_training.java # Wool training
 
 yaml
 Copy code
-Minimal, dependable desktop stack: **Java 8+ (Swing GUI) + MySQL**, developed in **NetBeans**.
 
 ---
 
-## 🗂 Recommended Repository Structure
-WoolManagement/
-├─ docs/
-│ └─ report.pdf # Your project report/screens
-├─ database/
-│ ├─ schema.sql # Tables for login, producer, certi, new_product, store_product, trend
-│ └─ demo-data.sql # Small starter dataset
-├─ src/
-│ ├─ main/java/com/woolapp/
-│ │ ├─ Main.java # launches Login or Front page
-│ │ ├─ auth/ # Login, SignUp
-│ │ ├─ db/ConnectionProvider.java # JDBC connection (reads db.properties)
-│ │ ├─ model/ # POJOs: Producer, Product, Trend, Certificate, Shipment, User
-│ │ ├─ ui/ # Swing frames/panels
-│ │ └─ modules/
-│ │ ├─ info/ # Producer & Trend screens
-│ │ ├─ tracking/ # Vehicles/Shipments
-│ │ ├─ quality/ # Certificates/Grades
-│ │ ├─ storage/ # Inventory CRUD
-│ │ ├─ trading/ # Marketplace UI
-│ │ └─ training/ # Education directory
-│ └─ main/resources/
-│ └─ db.properties.example # DB config template
-├─ README.md
-└─ LICENSE (optional)
+## ⚙️ Setup Instructions
 
-yaml
-Copy code
+1. Install **JDK 8+** and **MySQL**.  
+2. Create a database (`wool_db`) and set up tables for:
+   - Users (login/roles)
+   - Producers
+   - Products
+   - Shipments
+   - Certificates
+   - Trends
+3. Open this project in **NetBeans** (forms will load in drag-and-drop GUI editor).  
+4. Update DB credentials inside `Connect.java` (or related config).  
+5. Run the project by setting `Login.java` or `Front1.java` as the **main class**.  
 
 ---
 
-## 🔧 Prerequisites
-- **JDK 8+**
-- **MySQL 8** (or 5.7) running locally
-- **NetBeans IDE** (any recent build)
+## ▶️ How It Works
+
+- **Managers**: login → manage producers → certify wool → add storage → assign vehicles → track deliveries → check market trends.  
+- **Customers**: sign up/login → view wool information & trends → purchase wool → track their order.  
 
 ---
 
-## ⚙️ Setup (Quick Start)
-1. **Clone or open** the project in NetBeans.
-2. Create database and tables:
-   ```sql
-   CREATE DATABASE wool_db DEFAULT CHARACTER SET utf8mb4;
-   USE wool_db;
-   SOURCE database/schema.sql;
-   SOURCE database/demo-data.sql;
-Configure DB credentials:
+## 🗃 Database (Conceptual Overview)
 
-text
-Copy code
-src/main/resources/db.properties.example → src/main/resources/db.properties
-Then edit db.url, db.username, db.password.
+- **login** → stores manager and customer accounts.  
+- **producer** → details of wool producers and their rates.  
+- **new_product / wool_storage** → inventory of wool products.  
+- **store_product** → shipment and transport records.  
+- **certi / wool_quality** → wool quality grades and certificates.  
+- **trend** → market trend information.  
+- **billing / buyer** → transaction and billing details.  
 
-Choose Main Class: set Login.java (or Front1.java) as the main class in NetBeans.
+---
 
-Run ▶️
+## 🚀 Future Improvements
 
-▶️ How to Use
-Login as Manager or Customer (create a customer in SignUp → login table).
+- Mobile app version for farmers and buyers.  
+- Payment integration for transactions.  
+- Cloud hosting for remote multi-user access.  
+- Multilingual UI (regional languages).  
+- AI-based wool price predictions.  
 
-Use the Dashboard to open modules:
-
-Info → producers + market trends.
-
-Tracking → vehicles/shipments and current status.
-
-Storage → inventory CRUD & storage place.
-
-Quality → add/view grade certificates.
-
-Trading → buy/sell wool (listings).
-
-Training → learning materials & artisan directory.
-
-🗃 Database
-Tables used
-login — users & roles
-
-producer — producer master data and rates
-
-certi — quality certifications
-
-new_product — stored wool items
-
-store_product — consignments/transport
-
-trend — market trend snapshots
-
-Schema (database/schema.sql)
-sql
-Copy code
--- Wool Management System - baseline schema
-CREATE DATABASE IF NOT EXISTS wool_db DEFAULT CHARACTER SET utf8mb4;
-USE wool_db;
-
--- Users & roles
-CREATE TABLE IF NOT EXISTS login (
-  username       VARCHAR(50) PRIMARY KEY,
-  password_hash  VARCHAR(255) NOT NULL,
-  role           ENUM('MANAGER','CUSTOMER') NOT NULL DEFAULT 'CUSTOMER',
-  created_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Producers
-CREATE TABLE IF NOT EXISTS producer (
-  producer_id    INT AUTO_INCREMENT PRIMARY KEY,
-  name           VARCHAR(120) NOT NULL,
-  state          VARCHAR(100),
-  contact        VARCHAR(60),
-  rate           DECIMAL(10,2),
-  cert_id        INT NULL,
-  created_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Certifications
-CREATE TABLE IF NOT EXISTS certi (
-  cert_id        INT AUTO_INCREMENT PRIMARY KEY,
-  producer_id    INT NOT NULL,
-  certification_no VARCHAR(64),
-  grade          VARCHAR(16),
-  issued_at      DATE,
-  valid_till     DATE,
-  CONSTRAINT fk_certi_producer FOREIGN KEY (producer_id) REFERENCES producer(producer_id)
-);
-
--- Inventory
-CREATE TABLE IF NOT EXISTS new_product (
-  product_id     INT AUTO_INCREMENT PRIMARY KEY,
-  producer_id    INT,
-  wool_type      VARCHAR(50),
-  weight_kg      DECIMAL(10,2),
-  rate           DECIMAL(10,2),
-  storage_place  VARCHAR(120),
-  created_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  CONSTRAINT fk_np_producer FOREIGN KEY (producer_id) REFERENCES producer(producer_id)
-);
-
--- Shipments / Transport
-CREATE TABLE IF NOT EXISTS store_product (
-  shipment_id    INT AUTO_INCREMENT PRIMARY KEY,
-  product_id     INT NOT NULL,
-  vehicle_no     VARCHAR(30),
-  status         ENUM('ARRANGED','RUNNING','DEFAULT','DELIVERED') DEFAULT 'ARRANGED',
-  destination    VARCHAR(120),
-  eta            DATE,
-  updated_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  CONSTRAINT fk_sp_product FOREIGN KEY (product_id) REFERENCES new_product(product_id)
-);
-
--- Market trends
-CREATE TABLE IF NOT EXISTS trend (
-  trend_id       INT AUTO_INCREMENT PRIMARY KEY,
-  region         VARCHAR(100),
-  price_index    DECIMAL(10,2),
-  published_at   DATE,
-  notes          TEXT
-);
-Demo Data (database/demo-data.sql)
-sql
-Copy code
-USE wool_db;
-
--- demo manager (plain text for demo only)
-INSERT INTO login (username, password_hash, role) VALUES
-('admin', 'admin123', 'MANAGER')
-ON DUPLICATE KEY UPDATE password_hash=VALUES(password_hash), role=VALUES(role);
-
--- sample producers
-INSERT INTO producer (name, state, contact, rate) VALUES
-('Alpha Wool Co.', 'Rajasthan', 'alpha@example.com', 320.00),
-('Himalayan Wool', 'Himachal Pradesh', 'hima@example.com', 410.00);
-
--- sample certificate
-INSERT INTO certi (producer_id, certification_no, grade, issued_at, valid_till)
-VALUES (1, 'CERT-001', 'A', '2024-01-10', '2025-01-10');
-
--- sample products
-INSERT INTO new_product (producer_id, wool_type, weight_kg, rate, storage_place)
-VALUES (1, 'Merino', 120.5, 350.00, 'Warehouse A'),
-       (2, 'Cashmere Blend', 80.0, 420.00, 'Warehouse B');
-
--- sample shipments
-INSERT INTO store_product (product_id, vehicle_no, status, destination, eta)
-VALUES (1, 'TN-09-1234', 'ARRANGED', 'Jaipur', '2025-09-20'),
-       (2, 'HP-33-5678', 'RUNNING',  'Delhi',  '2025-09-12');
-
--- market trends
-INSERT INTO trend (region, price_index, published_at, notes)
-VALUES ('North', 102.5, '2025-08-15', 'Seasonal uptick observed');
-DB Config (src/main/resources/db.properties.example)
-properties
-Copy code
-# Copy to src/main/resources/db.properties and edit for your environment
-db.url=jdbc:mysql://localhost:3306/wool_db
-db.username=root
-db.password=change-me
-db.pool.size=10
-🧭 Typical User Flows
-Manager: login → dashboard → certify wool → update inventory → assign vehicle → track status → complete delivery → view trends.
-
-Customer: sign up/login → view trends & listings → buy → track shipment.
+---
