@@ -271,16 +271,7 @@ Wool_management/src/
 
 ---
 
-## 🚀 Quick Start
-
-### Prerequisites
-
-- **Java Development Kit (JDK)** 8 or higher
-- **Apache NetBeans IDE** (Latest version)
-- **MySQL Server** 5.7 or higher
-- **Git** for version control
-
-### Step 1: Clone Repository
+### **Step 1: Clone Repository**
 ```bash
 git clone https://github.com/kirubaharan181/Wool_Management.git
 cd Wool_Management
