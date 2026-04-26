@@ -337,6 +337,6 @@ CREATE TABLE quality_control (
 
 ⭐ Star this repository if you find it useful!
 
-[🔝 Back to Top](#table-of-contents)
+[🔝 Back to Top](#-wool-management-system)
 
 </div>
