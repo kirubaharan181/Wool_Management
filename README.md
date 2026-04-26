@@ -245,7 +245,7 @@ Wool_management/src/
 ├─ wool_tracking.java          # Wool tracking dashboard
 ├─ wool_trading.java           # Wool trading
 └─ wool_training.java          # Wool training
-
+'''
 ---
 
 ## ⚙️ Setup Instructions
@@ -271,7 +271,7 @@ Wool_management/src/
 
 ---
 
-### **Step 1: Clone Repository**
+### Step 1: Clone Repository
 ```bash
 git clone https://github.com/kirubaharan181/Wool_Management.git
 cd Wool_Management
