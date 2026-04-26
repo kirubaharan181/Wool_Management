@@ -10,7 +10,7 @@
 
 **A comprehensive desktop application for managing the complete wool supply chain**—from production to market. Streamline operations, track quality, manage logistics, and optimize trading workflows with an integrated platform.
 
-[View Live Demo](#) • [Report Bug](#) • [Request Feature](#) • [View Documentation](#table-of-contents)
+• [View Documentation](#table-of-contents)
 
 </div>
 
