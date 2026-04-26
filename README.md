@@ -246,6 +246,7 @@ Wool_management/src/
 ├─ wool_trading.java           # Wool trading
 └─ wool_training.java          # Wool training
 '''
+
 ---
 
 ## ⚙️ Setup Instructions
