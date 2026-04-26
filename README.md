@@ -329,3 +329,11 @@ CREATE TABLE employees (
 
 CREATE TABLE quality_control (
     quality_id INT AUTO_INCREMENT PRIMARY
+
+<div align="center">
+
+⭐ Star this repository if you find it useful!
+
+[🔝 Back to Top](#table-of-contents)
+
+</div>
