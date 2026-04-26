@@ -1,33 +1,3 @@
-================================================================================
-                    ENHANCED README FOR WOOL MANAGEMENT
-                          GitHub Repository
-================================================================================
-
-COMPLETE CONTENT READY TO USE
-
-This file contains the complete enhanced README content. You can:
-1. Copy and paste this directly into your GitHub repository's README.md
-2. Or read through the full professional documentation below
-
-================================================================================
-INSTRUCTIONS:
-================================================================================
-
-TO IMPLEMENT:
-1. Go to: https://github.com/kirubaharan181/Wool_Management
-2. Click the pencil icon next to README.md (top right area)
-3. Select all text (Ctrl+A or Cmd+A)
-4. Delete it
-5. Paste the enhanced content from this file
-6. Scroll down and click "Commit changes"
-7. Write commit message: "docs: Enhance README with modern formatting"
-8. Click "Commit changes" again
-9. Done!
-
-================================================================================
-BEGIN ENHANCED README CONTENT:
-================================================================================
-
 # 🐑 Wool Management System
 
 <div align="center">
